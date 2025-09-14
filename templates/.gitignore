@@ -1,0 +1,6 @@
+# 排除所有文件
+*
+
+# 但保留README文件
+!README.md
+!.gitignore
