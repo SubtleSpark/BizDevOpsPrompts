@@ -8,6 +8,17 @@
 - **更新频率**: 定期更新
 - **本地路径**: `templates/system-prompts-and-models-of-ai-tools/`
 
+### 2. kiro (Spec-Driven Development Guide)
+- **仓库地址**: https://github.com/jasonkneen/kiro
+- **用途**: 规范驱动开发方法论和最佳实践指南
+- **核心内容**: Requirements → Design → Tasks 三阶段开发流程
+- **本地路径**: `templates/kiro-full/`
+- **特色**: 
+  - EARS标准需求格式化
+  - AI协作优化的提示策略
+  - 系统化设计决策框架
+  - 完整的质量保证流程
+
 ## 使用说明
 
 1. templates目录下的文件默认被.gitignore排除，避免提交大量第三方内容
@@ -19,6 +30,9 @@
 ```bash
 # 克隆主要模板仓库
 git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git templates/system-prompts-and-models-of-ai-tools
+
+# 克隆规范驱动开发指南
+git clone https://github.com/jasonkneen/kiro.git templates/kiro-full
 ```
 
 ## 注意事项
