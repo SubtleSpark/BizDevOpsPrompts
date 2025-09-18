@@ -9,14 +9,27 @@
 - **服务名称**：订单服务
 - **功能描述**：处理订单支付请求，调用支付服务完成扣款
 - **请求参数**：
-  - orderId：string - 订单ID
-  - paymentMethod：string - 支付方式（alipay/wechat/card）
-  - amount：number - 支付金额（分为单位）
+```json
+{
+  "orderId": "string (required)",
+  "paymentMethod": "enum ['alipay', 'wechat', 'card'] (required)",
+  "amount": "number (required, 分为单位, >0)"
+}
+```
+
 - **响应结构**：
-  - success：boolean - 支付是否成功
-  - orderId：string - 订单ID
-  - paymentId：string - 支付流水号
-  - message：string - 处理结果描述
+```json
+{
+  "success": "boolean (required)",
+  "orderId": "string (required)",
+  "paymentId": "string (optional, 支付成功时返回)",
+  "message": "string (required)",
+  "data": {
+    "amount": "number (required, 分为单位)",
+    "status": "enum ['pending', 'paid', 'failed'] (required)"
+  }
+}
+```
 
 ## 技术调用时序图（完整流程）
 
