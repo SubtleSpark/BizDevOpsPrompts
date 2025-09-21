@@ -19,6 +19,18 @@
   - 系统化设计决策框架
   - 完整的质量保证流程
 
+### 3. RIPER-5 (AI提示词工程与工作流集合)
+- **仓库地址**: https://github.com/NeekChaw/RIPER-5.git
+- **用途**: 高质量、结构化的AI提示词和工作流集合，专注于提升AI在软件开发等领域的协作效率
+- **核心内容**: RIPER-5行为协议 + Claude Code专用提示词集合
+- **本地路径**: `templates/RIPER-5/`
+- **特色**: 
+  - RIPER-5 AI编码行为协议框架，确保安全可控的编码流程
+  - 多种专业工作流：需求收集、代码重构、专业Git提交等
+  - 针对Claude模型优化的提示词集合
+  - 多代理协作深度思考工作流
+  - 实用的开发场景解决方案
+
 ## 使用说明
 
 1. templates目录下的文件默认被.gitignore排除，避免提交大量第三方内容
@@ -33,6 +45,9 @@ git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git t
 
 # 克隆规范驱动开发指南
 git clone https://github.com/jasonkneen/kiro.git templates/kiro-full
+
+# 克隆AI提示词工程与工作流集合
+git clone https://github.com/NeekChaw/RIPER-5.git templates/RIPER-5
 ```
 
 ## 注意事项
