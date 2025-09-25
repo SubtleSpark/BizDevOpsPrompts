@@ -24,12 +24,24 @@
 - **用途**: 高质量、结构化的AI提示词和工作流集合，专注于提升AI在软件开发等领域的协作效率
 - **核心内容**: RIPER-5行为协议 + Claude Code专用提示词集合
 - **本地路径**: `templates/RIPER-5/`
-- **特色**: 
+- **特色**:
   - RIPER-5 AI编码行为协议框架，确保安全可控的编码流程
   - 多种专业工作流：需求收集、代码重构、专业Git提交等
   - 针对Claude模型优化的提示词集合
   - 多代理协作深度思考工作流
   - 实用的开发场景解决方案
+
+### 4. kingkongshot-prompts (精选提示词集合)
+- **仓库地址**: https://github.com/kingkongshot/prompts
+- **用途**: 精选的AI提示词集合，包含开发工具、代理和可视化等多个领域
+- **核心内容**: Claude提示词、Kiro工作流规范、Obsidian可视化等
+- **本地路径**: `templates/kingkongshot-prompts/`
+- **特色**:
+  - Claude开发环境配置和代理模板
+  - Kiro规范驱动开发工作流（中英文）
+  - 专业的Git提交格式化工具
+  - Obsidian Canvas功能框架图绘制指南
+  - 内存网络构建和库使用研究代理
 
 ## 使用说明
 
@@ -48,6 +60,9 @@ git clone https://github.com/jasonkneen/kiro.git templates/kiro-full
 
 # 克隆AI提示词工程与工作流集合
 git clone https://github.com/NeekChaw/RIPER-5.git templates/RIPER-5
+
+# 克隆精选提示词集合
+git clone https://github.com/kingkongshot/prompts.git templates/kingkongshot-prompts
 ```
 
 ## 注意事项
