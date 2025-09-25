@@ -8,28 +8,6 @@
 - **接口路径**：POST /api/v1/orders/pay
 - **服务名称**：订单服务
 - **功能描述**：处理订单支付请求，调用支付服务完成扣款
-- **请求参数**：
-```json
-{
-  "orderId": "string (required)",
-  "paymentMethod": "enum ['alipay', 'wechat', 'card'] (required)",
-  "amount": "number (required, 分为单位, >0)"
-}
-```
-
-- **响应结构**：
-```json
-{
-  "success": "boolean (required)",
-  "orderId": "string (required)",
-  "paymentId": "string (optional, 支付成功时返回)",
-  "message": "string (required)",
-  "data": {
-    "amount": "number (required, 分为单位)",
-    "status": "enum ['pending', 'paid', 'failed'] (required)"
-  }
-}
-```
 
 ## 技术调用时序图（完整流程）
 
