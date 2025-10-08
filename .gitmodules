@@ -1,0 +1,12 @@
+[submodule "templates/system-prompts-and-models-of-ai-tools"]
+	path = templates/system-prompts-and-models-of-ai-tools
+	url = https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git
+[submodule "templates/kiro-full"]
+	path = templates/kiro-full
+	url = https://github.com/jasonkneen/kiro.git
+[submodule "templates/RIPER-5"]
+	path = templates/RIPER-5
+	url = https://github.com/NeekChaw/RIPER-5.git
+[submodule "templates/kingkongshot-prompts"]
+	path = templates/kingkongshot-prompts
+	url = https://github.com/kingkongshot/prompts.git

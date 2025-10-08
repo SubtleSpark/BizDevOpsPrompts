@@ -43,30 +43,67 @@
   - Obsidian Canvas功能框架图绘制指南
   - 内存网络构建和库使用研究代理
 
+### 5. Anthropic Engineering Blog (AI代理系统工程实践)
+- **博客地址**: https://www.anthropic.com/engineering/
+- **用途**: Anthropic官方工程博客，分享AI代理系统构建的最佳实践和技术洞察
+- **核心内容**: 代理工具设计、上下文工程、多代理系统、性能优化等
+- **特色**:
+  - Anthropic官方工程团队实战经验分享
+  - 聚焦代理系统（Agentic AI）的完整技术栈
+  - 从工具设计到性能基准测试的系统化方法论
+  - 结合评估驱动开发(Evaluation-Driven Development)的实践案例
+  - 涵盖MCP协议、工具优化、提示工程等前沿技术
+
 ## 使用说明
 
-1. templates目录下的文件默认被.gitignore排除，避免提交大量第三方内容
-2. 需要时可以手动克隆相关仓库到对应目录
+1. templates目录下的仓库通过 Git Submodule 管理，确保版本可控
+2. 初次克隆本仓库后，需要初始化 submodules
 3. 分析这些模板后，在`generated/`目录创建优化的提示词套装
 
-## 克隆命令
+## Submodule 管理命令
 
+### 初次克隆仓库
 ```bash
-# 克隆主要模板仓库
-git clone https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git templates/system-prompts-and-models-of-ai-tools
+# 克隆主仓库并初始化所有 submodules
+git clone --recursive https://github.com/<your-username>/BizDevOpsPrompts.git
 
-# 克隆规范驱动开发指南
-git clone https://github.com/jasonkneen/kiro.git templates/kiro-full
+# 或者分步执行
+git clone https://github.com/<your-username>/BizDevOpsPrompts.git
+cd BizDevOpsPrompts
+git submodule update --init --recursive
+```
 
-# 克隆AI提示词工程与工作流集合
-git clone https://github.com/NeekChaw/RIPER-5.git templates/RIPER-5
+### 添加新的 Submodule（仅维护者需要）
+```bash
+# 添加主要模板仓库
+git submodule add https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools.git templates/system-prompts-and-models-of-ai-tools
 
-# 克隆精选提示词集合
-git clone https://github.com/kingkongshot/prompts.git templates/kingkongshot-prompts
+# 添加规范驱动开发指南
+git submodule add https://github.com/jasonkneen/kiro.git templates/kiro-full
+
+# 添加AI提示词工程与工作流集合
+git submodule add https://github.com/NeekChaw/RIPER-5.git templates/RIPER-5
+
+# 添加精选提示词集合
+git submodule add https://github.com/kingkongshot/prompts.git templates/kingkongshot-prompts
+```
+
+### 更新 Submodules
+```bash
+# 更新所有 submodules 到最新版本
+git submodule update --remote --merge
+
+# 更新单个 submodule
+cd templates/system-prompts-and-models-of-ai-tools
+git pull origin main
+cd ../..
+git add templates/system-prompts-and-models-of-ai-tools
+git commit -m "Update submodule: system-prompts-and-models-of-ai-tools"
 ```
 
 ## 注意事项
 
 - 第三方仓库内容仅用于学习和参考
 - 生成的提示词应该是原创内容，避免直接复制
-- 定期更新模板仓库以获取最新内容
+- Submodules 会锁定在特定 commit，确保环境一致性
+- 定期使用 `git submodule update --remote` 更新到最新版本
